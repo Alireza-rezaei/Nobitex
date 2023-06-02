@@ -15,6 +15,7 @@ export default {
 			dark: '#14151a',
 			purple: '#784ed1',
 			textColor: '#14151A',
+			gray: '#f2f3f5',
 		},
 	},
 	plugins: [],
