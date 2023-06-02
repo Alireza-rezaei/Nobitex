@@ -7,7 +7,7 @@ import { faBook, faChartSimple, faUserPlus } from '@fortawesome/free-solid-svg-i
 import { HiAcademicCap } from 'react-icons/hi';
 import { AiFillInstagram, AiFillFacebook, AiFillLinkedin, AiFillTwitterCircle } from 'react-icons/ai';
 import { RiTelegramFill } from 'react-icons/ri';
-import ToggleBtn from '../ToggleBtn';
+import ToggleBtn from '../../../Components/ToggleButton/ToggleBtn';
 import './Navlink.scss';
 import Social from '../Social/Social';
 

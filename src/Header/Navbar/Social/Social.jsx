@@ -12,5 +12,5 @@ export default function Social({ socialLink, children }) {
 
 Social.propTypes = {
 	socialLink: PropTypes.string,
-	children: PropTypes.string,
+	children: PropTypes.object,
 };

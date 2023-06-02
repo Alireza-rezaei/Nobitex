@@ -1,9 +1,9 @@
 import { useState } from 'react';
 import { BiMenu } from 'react-icons/bi';
 import { BsBoxArrowRight } from 'react-icons/bs';
-import Login from './Login';
+import Login from './LoginButton/Login';
 import NavLink from './NavLink/NavLink';
-import Logo from './Logo';
+import Logo from './Logo/Logo';
 
 export default function Navbar() {
 	const [menuStyle, setMenuStyle] = useState({ opacity: 0, transform: 'translateX(20rem)' });
@@ -44,13 +44,20 @@ export default function Navbar() {
 						<div className='flex flex-col h-full overflow-hidden'>
 							<Login
 								to='/login/'
+								className='hover:bg-violet-800'
 								title='ورود'
 								width='w-11/12'
 								margin='mt-4'
 								bgColor='bg-white'
 								textColor='text-purple'
 							/>
-							<Login to='/signup/' title='ثبت نام' width='w-11/12' margin='mt-4' />
+							<Login
+								className='hover:bg-violet-800'
+								to='/signup/'
+								title='ثبت نام'
+								width='w-11/12'
+								margin='mt-4'
+							/>
 							<NavLink direction='col' margin='mt-10' />
 						</div>
 					</div>
@@ -72,6 +79,7 @@ export default function Navbar() {
 				/>
 				<Login
 					to='/signup/'
+					className='hover:bg-violet-800'
 					title='ثبت نام'
 					width='w-[5rem]'
 					margin='mt-0'

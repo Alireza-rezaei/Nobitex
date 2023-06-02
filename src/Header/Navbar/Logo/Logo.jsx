@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import nobitexLogo from './../../assets/NobitexLogo/Logo.svg';
+import nobitexLogo from './../../../assets/NobitexLogo/Logo.svg';
 
 export default function Logo() {
 	return (

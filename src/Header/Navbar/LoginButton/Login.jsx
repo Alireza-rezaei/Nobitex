@@ -15,7 +15,7 @@ export default function Login({
 		<div className='w-full flex items-center justify-center'>
 			<Link to={to} className='w-full block '>
 				<button
-					className={`${width} ${margin} ${bgColor} ${textColor} ${padding} ${className} hover:bg-violet-800 transi text-sm border border-purple hover:border-violet-800 hover:text-white rounded-md mx-auto flex items-center justify-center`}
+					className={`${width} ${margin} ${bgColor} ${textColor} ${padding} ${className} transition-all text-sm border border-purple hover:text-white rounded-md mx-auto flex items-center justify-center`}
 				>
 					{title}
 				</button>
