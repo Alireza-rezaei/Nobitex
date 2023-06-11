@@ -1,3 +1,4 @@
+import { Container } from '@mui/system';
 import './App.scss';
 import CryptoCurrencyPriceTable from './Components/CryptoCurrencyPrice/CryptoCurrencyPriceTable';
 import Header from './Components/Header/Header';
@@ -7,8 +8,10 @@ function App() {
 	return (
 		<>
 			<Header />
-			<Landing />
-			<CryptoCurrencyPriceTable />
+			<Container>
+				<Landing />
+				<CryptoCurrencyPriceTable />
+			</Container>
 		</>
 	);
 }

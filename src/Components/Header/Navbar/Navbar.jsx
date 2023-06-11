@@ -67,7 +67,7 @@ export default function Navbar() {
 			<div className='hidden lg:flex lg:w-8/12 2xl:w-9/12 '>
 				<NavLink direction='row' margin='m-0' textColor='text-white' />
 			</div>
-			<div className='w-[5rem] sm:w-[10rem] md:ml-3 flex items-center justify-center'>
+			<div className='w-[5rem] sm:w-[10rem] lg:ml-6 flex items-center justify-center'>
 				<Login
 					to='/login/'
 					title='ورود'

@@ -20,7 +20,7 @@ export default {
 			gray900: '#85888f',
 		},
 		screens: {
-			xsm: '368px',
+			xsm: { max: '375px' },
 			sm: '640px',
 			md: '768px',
 			lg: '1024px',
