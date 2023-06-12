@@ -1,0 +1,34 @@
+.mySwiper {
+	padding: 0 2rem 2rem;
+}
+.swiper-button-next,
+.swiper-button-prev {
+	margin-bottom: 2rem;
+	width: 2.5rem;
+	height: 2.5rem;
+	color: #fff;
+	background: #784ed1;
+	border-radius: 50%;
+	&:after {
+		font-size: 1rem;
+	}
+}
+.swiper-pagination {
+	bottom: 0rem !important;
+}
+.swiper-pagination-bullet-active {
+	background-color: #784ed1;
+}
+
+@media screen and (max-width: 1024px) {
+	.swiper-button-next,
+	.swiper-button-prev {
+		width: 1.5rem;
+		height: 1.5rem;
+		left: 0;
+	}
+	.mySwiper {
+		slidesperview: 2;
+		spacebetween: 30;
+	}
+}

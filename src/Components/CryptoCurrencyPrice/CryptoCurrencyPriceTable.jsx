@@ -5,10 +5,12 @@ import { MdKeyboardArrowLeft } from 'react-icons/md';
 import fetchCryptocurrencyData from './FetchCryptoCurrencyData/FetchCryptoCurrencyData';
 
 export default function CryptoCurrencyPriceTable() {
+	// State variables for storing coin data, selected currency, and exchange rate
 	const [coins, setCoins] = useState([]);
 	const [vsCurrency, setVsCurrency] = useState('IRT');
 	const [exchangeRate, setExchangeRate] = useState('10');
 
+	// Fetch cryptocurrency data on component mount
 	useEffect(() => {
 		const fetchData = async () => {
 			try {
@@ -22,6 +24,7 @@ export default function CryptoCurrencyPriceTable() {
 		fetchData();
 	}, []);
 
+	// Fetch exchange rate on component mount
 	useEffect(() => {
 		const fetchExchangeRate = async () => {
 			try {
@@ -38,6 +41,7 @@ export default function CryptoCurrencyPriceTable() {
 		fetchExchangeRate();
 	}, []);
 
+	// Render loading indicator if coins data is empty
 	if (coins.length === 0) {
 		return (
 			<div className='flex items-center justify-center -top-[16rem] mx-auto z-20 relative'>
@@ -48,14 +52,17 @@ export default function CryptoCurrencyPriceTable() {
 		);
 	}
 
+	// Render the cryptocurrency price table
 	return (
 		<div className='w-full flex justify-start content-center relative md:-top-[8rem] lg:-top-[23rem] z-20 flex-col'>
+			{/* Currency selection */}
 			<div className='flex items-center justify-start w-[92vw] md:w-[22rem] h-[3.5rem] bg-white rounded-lg mr-0'>
 				<div className='px-2 flex justify-evenly items-center w-full'>
 					<h2 className='text-dark font-normal text-md xsm:text-[.9rem] md:text-[1rem]'>
 						انتخاب بازار بر اساس
 					</h2>
 					<div className='w-1/2 flex justify-center items-center flex-nowrap'>
+						{/* Button for selecting IRT currency */}
 						<button
 							onClick={() => setVsCurrency('IRT')}
 							className={`${
@@ -66,6 +73,7 @@ export default function CryptoCurrencyPriceTable() {
 						>
 							تومان IRT
 						</button>
+						{/* Button for selecting USDT currency */}
 						<button
 							onClick={() => setVsCurrency('USDT')}
 							className={`${
@@ -80,6 +88,7 @@ export default function CryptoCurrencyPriceTable() {
 				</div>
 			</div>
 
+			{/* Cryptocurrency price table */}
 			<div className='w-full bg-white shadow-md rounded-md rounded-tr-none top-2 md:-top-1 relative'>
 				<table className='w-full'>
 					<thead className='w-full text-sm font-light text-slate-400 border-b border-slate-300'>
@@ -109,6 +118,7 @@ export default function CryptoCurrencyPriceTable() {
 						)}
 					</tbody>
 				</table>
+				{/* Link to view all markets */}
 				<Link
 					to='/current-prices/'
 					className='w-full block text-center p-2 text-purple col-span-full hover:text-b'
@@ -124,7 +134,9 @@ export default function CryptoCurrencyPriceTable() {
 	);
 }
 
+// Component for rendering each row in the cryptocurrency price table
 function CoinRow({ coin, vsCurrency, exchangeRate }) {
+	// Format the price based on the selected currency and exchange rate
 	const formatPrice = (price) => {
 		if (vsCurrency === 'USDT') {
 			return `$${price.toLocaleString()}`;
@@ -138,6 +150,7 @@ function CoinRow({ coin, vsCurrency, exchangeRate }) {
 		}
 	};
 
+	// Format the percentage change and apply appropriate styling
 	const formatPercentage = (percentage) => {
 		const formattedPercentage = percentage.toFixed(2);
 		if (percentage < 0) {
