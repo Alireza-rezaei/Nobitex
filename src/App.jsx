@@ -4,6 +4,7 @@ import CryptoCurrencyPriceTable from './Components/CryptoCurrencyPrice/CryptoCur
 import Header from './Components/Header/Header';
 import Landing from './Components/Landing/Landing';
 import Slider from './Components/Slider/Slider';
+import WhyNobitex from './Components/WhyNobitex/WhyNobitex';
 
 function App() {
 	return (
@@ -14,6 +15,7 @@ function App() {
 				<CryptoCurrencyPriceTable />
 				<Slider />
 			</Container>
+			<WhyNobitex />
 		</>
 	);
 }
