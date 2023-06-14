@@ -6,6 +6,7 @@ import Landing from './Components/Landing/Landing';
 import Slider from './Components/Slider/Slider';
 import WhyNobitex from './Components/WhyNobitex/WhyNobitex';
 import Facilities from './Components/Facilities/Facilities';
+import AnalyticsCounter from './Components/AnalyticsCounter/AnalyticsCounter';
 
 function App() {
 	return (
@@ -20,6 +21,7 @@ function App() {
 			<Container>
 				<Facilities />
 			</Container>
+			<AnalyticsCounter />
 		</>
 	);
 }
