@@ -42,28 +42,28 @@ export default function App() {
 			>
 				<SwiperSlide>
 					<div className='block'>
-						<Link to='/sell'>
+						<Link to='/sell-position'>
 							<img src={sellPosition} className='rounded-3xl' alt='' />
 						</Link>
 					</div>
 				</SwiperSlide>
 				<SwiperSlide>
 					<div className='block'>
-						<Link to='/sell'>
+						<Link to='/trust-wallet'>
 							<img src={trustWallet} className='rounded-3xl' alt='' />
 						</Link>
 					</div>
 				</SwiperSlide>
 				<SwiperSlide>
 					<div className='block'>
-						<Link to='/sell'>
+						<Link to='/staking'>
 							<img src={staking} className='rounded-3xl' alt='' />
 						</Link>
 					</div>
 				</SwiperSlide>
 				<SwiperSlide>
 					<div className='block'>
-						<Link to='/sell'>
+						<Link to='/ways-prevention'>
 							<img src={waysPrevention} className='rounded-3xl' alt='' />
 						</Link>
 					</div>

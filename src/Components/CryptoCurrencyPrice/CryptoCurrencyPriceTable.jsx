@@ -44,93 +44,98 @@ export default function CryptoCurrencyPriceTable() {
 	// Render loading indicator if coins data is empty
 	if (coins.length === 0) {
 		return (
-			<div className='flex items-center justify-center -top-[16rem] mx-auto z-20 relative'>
-				<div className='w-4 h-4 rounded-full animate-pulse bg-violet-400'></div>
-				<div className='w-4 h-4 rounded-full animate-pulse bg-violet-400'></div>
-				<div className='w-4 h-4 rounded-full animate-pulse bg-violet-400'></div>
+			<div className='flex items-center flex-col justify-center top-0 lg:-top-[16rem] mx-auto z-20 relative'>
+				<div className='flex items-center justify-center '>
+					<div className='w-4 h-4 rounded-full animate-pulse bg-violet-400'></div>
+					<div className='w-4 h-4 rounded-full animate-pulse bg-violet-400'></div>
+					<div className='w-4 h-4 rounded-full animate-pulse bg-violet-400'></div>
+				</div>
+				<span className='whitespace-pre-line'>درحال بارگذاری رمز ارز ها...</span>
 			</div>
 		);
 	}
 
 	// Render the cryptocurrency price table
 	return (
-		<div className='w-full flex justify-start content-center relative md:-top-[8rem] lg:-top-[23rem] z-20 flex-col'>
-			{/* Currency selection */}
-			<div className='flex items-center justify-start w-[92vw] md:w-[22rem] h-[3.5rem] bg-white rounded-lg mr-0'>
-				<div className='px-2 flex justify-evenly items-center w-full'>
-					<h2 className='text-dark font-normal text-md xsm:text-[.9rem] md:text-[1rem]'>
-						انتخاب بازار بر اساس
-					</h2>
-					<div className='w-1/2 flex justify-center items-center flex-nowrap'>
-						{/* Button for selecting IRT currency */}
-						<button
-							onClick={() => setVsCurrency('IRT')}
-							className={`${
-								vsCurrency === 'IRT'
-									? 'text-white bg-warmGray-500'
-									: 'text-warmGray-500 bg-warmGray-300'
-							} py-1.5 px-3 rounded-r-md text-md transition-all xsm:text-[0.7rem] whitespace-nowrap`}
-						>
-							تومان IRT
-						</button>
-						{/* Button for selecting USDT currency */}
-						<button
-							onClick={() => setVsCurrency('USDT')}
-							className={`${
-								vsCurrency === 'USDT'
-									? 'text-white bg-warmGray-500'
-									: 'text-warmGray-500 bg-warmGray-300'
-							} py-1.5 px-3 rounded-l-md text-md transition-all xsm:text-[0.7rem] whitespace-nowrap`}
-						>
-							تتر USDT
-						</button>
+		<>
+			<div className='w-full flex justify-start content-center relative md:-top-[8rem] lg:-top-[23rem] z-20 flex-col'>
+				{/* Currency selection */}
+				<div className='flex items-center justify-start w-[92vw] md:w-[22rem] h-[3.5rem] bg-white rounded-lg mr-0'>
+					<div className='px-2 flex justify-evenly items-center w-full'>
+						<h2 className='text-dark font-normal text-md xsm:text-[.9rem] md:text-[1rem]'>
+							انتخاب بازار بر اساس
+						</h2>
+						<div className='w-1/2 flex justify-center items-center flex-nowrap'>
+							{/* Button for selecting IRT currency */}
+							<button
+								onClick={() => setVsCurrency('IRT')}
+								className={`${
+									vsCurrency === 'IRT'
+										? 'text-white bg-warmGray-500'
+										: 'text-warmGray-500 bg-warmGray-300'
+								} py-1.5 px-3 rounded-r-md text-md transition-all xsm:text-[0.7rem] whitespace-nowrap`}
+							>
+								تومان IRT
+							</button>
+							{/* Button for selecting USDT currency */}
+							<button
+								onClick={() => setVsCurrency('USDT')}
+								className={`${
+									vsCurrency === 'USDT'
+										? 'text-white bg-warmGray-500'
+										: 'text-warmGray-500 bg-warmGray-300'
+								} py-1.5 px-3 rounded-l-md text-md transition-all xsm:text-[0.7rem] whitespace-nowrap`}
+							>
+								تتر USDT
+							</button>
+						</div>
 					</div>
 				</div>
-			</div>
 
-			{/* Cryptocurrency price table */}
-			<div className='w-full bg-white shadow-md rounded-md rounded-tr-none top-2 md:-top-1 relative'>
-				<table className='w-full'>
-					<thead className='w-full text-sm font-light text-slate-400 border-b border-slate-300'>
-						<tr>
-							<th className='text-start p-2 pr-20'>نام</th>
-							<th className='text-start p-2'>آخرین قیمت</th>
-							<th className='text-start p-2'>تغییر 24h</th>
-							<th className='text-start p-2 hidden md:table-cell'>نمودار هفتگی</th>
-							<th className='text-start p-2 hidden md:table-cell'> </th>
-						</tr>
-					</thead>
-					<tbody>
-						{coins.map((coin) => (
-							<CoinRow
-								key={coin.id}
-								coin={coin}
-								vsCurrency={vsCurrency}
-								exchangeRate={exchangeRate}
-							/>
-						))}
-						{coins.length === 0 && (
+				{/* Cryptocurrency price table */}
+				<div className='w-full bg-white shadow-md rounded-md rounded-tr-none top-2 md:-top-1 relative'>
+					<table className='w-full'>
+						<thead className='w-full text-sm font-light text-slate-400 border-b border-slate-300'>
 							<tr>
-								<td colSpan='5' className='text-center'>
-									No coins found.
-								</td>
+								<th className='text-start p-2 pr-20'>نام</th>
+								<th className='text-start p-2'>آخرین قیمت</th>
+								<th className='text-start p-2'>تغییر 24h</th>
+								<th className='text-start p-2 hidden md:table-cell'>نمودار هفتگی</th>
+								<th className='text-start p-2 hidden md:table-cell'> </th>
 							</tr>
-						)}
-					</tbody>
-				</table>
-				{/* Link to view all markets */}
-				<Link
-					to='/current-prices/'
-					className='w-full block text-center p-2 text-purple col-span-full hover:text-b'
-				>
-					<div className='relative p-5'>
-						<span className='absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 flex items-center justify-center'>
-							نمایش همه بازار <MdKeyboardArrowLeft />
-						</span>
-					</div>
-				</Link>
+						</thead>
+						<tbody>
+							{coins.map((coin) => (
+								<CoinRow
+									key={coin.id}
+									coin={coin}
+									vsCurrency={vsCurrency}
+									exchangeRate={exchangeRate}
+								/>
+							))}
+							{coins.length === 0 && (
+								<tr>
+									<td colSpan='5' className='text-center'>
+										No coins found.
+									</td>
+								</tr>
+							)}
+						</tbody>
+					</table>
+					{/* Link to view all markets */}
+					<Link
+						to='/current-prices/'
+						className='w-full block text-center p-2 text-purple col-span-full hover:text-b'
+					>
+						<div className='relative p-5'>
+							<span className='absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 flex items-center justify-center'>
+								نمایش همه بازار <MdKeyboardArrowLeft />
+							</span>
+						</div>
+					</Link>
+				</div>
 			</div>
-		</div>
+		</>
 	);
 }
 

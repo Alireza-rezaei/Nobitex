@@ -19,16 +19,3 @@
 .swiper-pagination-bullet-active {
 	background-color: #784ed1;
 }
-
-@media screen and (max-width: 1024px) {
-	.swiper-button-next,
-	.swiper-button-prev {
-		width: 1.5rem;
-		height: 1.5rem;
-		left: 0;
-	}
-	.mySwiper {
-		slidesperview: 2;
-		spacebetween: 30;
-	}
-}
