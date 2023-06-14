@@ -18,6 +18,7 @@ export default {
 			gray: '#f2f3f5',
 			gray500: '#e3e4e5',
 			gray900: '#85888f',
+			gray1000: '#4c505b',
 		},
 		screens: {
 			xsm: { max: '375px' },
