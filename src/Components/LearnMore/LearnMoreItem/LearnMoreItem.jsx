@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 export default function LearnMoreItem({ icon, title }) {
 	return (
@@ -12,3 +13,8 @@ export default function LearnMoreItem({ icon, title }) {
 		</div>
 	);
 }
+
+LearnMoreItem.propTypes = {
+	icon: PropTypes.string.isRequired,
+	title: PropTypes.string.isRequired,
+};

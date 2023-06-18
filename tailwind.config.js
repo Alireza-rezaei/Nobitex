@@ -19,6 +19,7 @@ export default {
 			gray500: '#e3e4e5',
 			gray900: '#85888f',
 			gray1000: '#4c505b',
+			lightPink: 'rgba(239,231,255,.698)',
 		},
 		screens: {
 			xsm: { max: '375px' },

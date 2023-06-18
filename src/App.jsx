@@ -8,6 +8,7 @@ import WhyNobitex from './Components/WhyNobitex/WhyNobitex';
 import Facilities from './Components/Facilities/Facilities';
 import AnalyticsCounter from './Components/AnalyticsCounter/AnalyticsCounter';
 import LearnMore from './Components/LearnMore/LearnMore';
+import Profit from './Components/Profit/Profit';
 
 function App() {
 	return (
@@ -24,6 +25,7 @@ function App() {
 			</Container>
 			<AnalyticsCounter />
 			<LearnMore />
+			<Profit />
 		</>
 	);
 }
