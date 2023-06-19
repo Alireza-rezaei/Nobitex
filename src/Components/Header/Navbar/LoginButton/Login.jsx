@@ -10,12 +10,13 @@ export default function Login({
 	padding = 'p-[0.5rem]',
 	bgColor = 'bg-purple',
 	textColor = 'text-white',
+	radius = 'rounded-md ',
 }) {
 	return (
 		<div className='w-full flex items-center justify-center'>
 			<Link to={to} className='w-full block '>
 				<button
-					className={`${width} ${margin} ${bgColor} ${textColor} ${padding} ${className} transition-all text-sm border border-purple hover:text-white rounded-md flex items-center justify-center`}
+					className={`${width} ${margin} ${bgColor} ${textColor} ${padding} ${className} ${radius} transition-all text-sm border border-purple hover:text-white flex items-center justify-center`}
 				>
 					{title}
 				</button>
@@ -33,4 +34,5 @@ Login.propTypes = {
 	padding: PropTypes.string,
 	bgColor: PropTypes.string,
 	textColor: PropTypes.string,
+	radius: PropTypes.string,
 };
