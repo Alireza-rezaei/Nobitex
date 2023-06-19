@@ -7,7 +7,7 @@ export default function Profit() {
 		<div className='bg-lightPink flex flex-row relative top-10 md:-top-[5rem] lg:-top-[17rem] w-full h-auto md:h-[20rem]'>
 			<Container>
 				<div className='flex flex-col md:flex-row relative w-full '>
-					<div className='title w-full h-auto md:h-[15rem] relative flex order-10 md:order-1 items-center md:my-auto flex-col justify-evenly mr-0 md:mr-6'>
+					<div className='title w-full h-auto md:h-[15rem] relative flex order-10 md:order-1 items-center md:my-auto flex-col justify-evenly -top-5'>
 						<h3 className='text-lg md:text-3xl w-full text-center md:text-start font-medium'>
 							{' '}
 							در سود نوبیتکس سهیم شوید{' '}

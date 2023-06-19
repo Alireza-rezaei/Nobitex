@@ -9,6 +9,7 @@ import Facilities from './Components/Facilities/Facilities';
 import AnalyticsCounter from './Components/AnalyticsCounter/AnalyticsCounter';
 import LearnMore from './Components/LearnMore/LearnMore';
 import Profit from './Components/Profit/Profit';
+import Footer from './Components/Footer/Footer';
 
 function App() {
 	return (
@@ -26,6 +27,7 @@ function App() {
 			<AnalyticsCounter />
 			<LearnMore />
 			<Profit />
+			<Footer />
 		</>
 	);
 }
